@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">Volver a casa</a>
+        </nav>
+    </header>
+
+    <aside>
+        <nav>
+        </nav>
+    </aside>
+    
+    <section>
+        <article>
+            <h1>Formularios</h1>
+            <form action="http://miDominio.com/miServicioWeb.php" method="post">
+                <fieldset>
+                    <legend>Datos de usuario</legend>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Juan Carlos" required autofocus/>
+                    <br/>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ej: Martinez"/>
+                    <br/>
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" min="1" max="180" step="1" value="18" />
+                    <br/>
+                    <label for="clave">Fecha de nacimiento</label>
+                    <input type="date" name="fechaNacimiento" id="clave"/>
+                    <br/>
+                    <label for="clave">Contraseña</label>
+                    <input type="password" name="clave" id="clave"/>
+                </fieldset>
+                <fieldset>
+                    <legend>Otros datos</legend>
+                    <label for="areaTexto">Comentarios:</label>
+                    <textarea name="areaTexto" id="areaTexto" placeholder="Comentario de ejemplo"></textarea>
+                    <br/>
+                    <label class="check"  for="mails">Correo</label>
+                    <input type="checkbox" name="mails" id="mails"/>
+                    <label class="check"  for="telefono">Llamada</label>
+                    <input type="checkbox" name="telefono" id="telefono"/>
+                    <br/>
+                    <label class="check" for="rojo">Rojo</label>
+                    <input type="radio" name="color" id="rojo"/>
+                    <label class="check" for="verde">Verde</label>
+                    <input type="radio" name="color" id="verde"/>
+                    <label class="check" for="azul">Azul</label>
+                    <input type="radio" name="otroColor" id="azul"/>
+                    <br/>
+                    <label for="paises">Nacion</label>
+                    <select name="paises" id="paises">
+                        <optgroup label="Latino America">
+                            <option value="Co">Colombia</option>
+                            <option value="Ec">Ecuador</option>
+                            <option value="Pe">Peru</option>
+                            <option value="Ar" selected>Argentina</option>
+                        </optgroup>
+                            <optgroup label="Europa">
+                            <option value="Es">España</option>
+                            <option value="Fr">Francia</option>
+                            <option value="It">Italia</option>
+                        </optgroup>
+                        <optgroup label="Medio Oriente">
+                            <option value="Ja">Japon</option>
+                            <option value="Ch">China</option>
+                            <option value="Ko">Korea</option>
+                        </optgroup>
+                    </select>
+                    <br/>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" name="ciudad" id="ciudad" list="nombreCiudades"/>
+                    <datalist id="nombreCiudades">
+                        <option value="Bogota"></option>
+                        <option value="Buenos Aires"></option>
+                        <option value="Madrid"></option>
+                        <option value="Roma"></option>
+                        <option value="Paris"></option>
+                    </datalist>
+                </fieldset>
+                <input type="submit" value="Enviar"/>
+                <input type="reset" value="Borrar"/>
+            </form>
+        </article>
+    </section>
+</body>
+</html>
